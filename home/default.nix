@@ -6,6 +6,7 @@ in
 {
   # import sub modules
   imports = [
+    ./dotfiles
     ./git.nix
     ./fish.nix
   ];

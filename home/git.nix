@@ -51,6 +51,11 @@
       # aliases for submodule
       update = "submodule update --init --recursive";
       foreach = "submodule foreach";
+
+      # more
+      fix = "commit --amend --no-edit";
+      oops = "reset HEAD~1";
+      sub = "submodule update --init --recursive";
     };
   };
 }
