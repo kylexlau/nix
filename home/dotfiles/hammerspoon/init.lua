@@ -1,3 +1,8 @@
+-- Download the Spoons --
+-- git clone https://github.com/Hammerspoon/Spoons.git
+-- git clone https://github.com/peterklijn/hammerspoon-shiftit
+
+
 -- hs.wifi.currentNetwork() not work in sonama
 -- add hs to System Settings -> Privacy & Security -> Location Services
 -- print(hs.location.get())
