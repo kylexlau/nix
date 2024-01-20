@@ -4,7 +4,7 @@
         hammerspoon = {
             source = ./hammerspoon;
             target = ".hammerspoon";
-            recursive = true
+            recursive = true;
         };
     };
 }
