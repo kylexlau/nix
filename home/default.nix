@@ -22,7 +22,7 @@ in
       xz
       unzip
       p7zip
-  
+
       # utils
       ripgrep
       jq
@@ -36,7 +36,7 @@ in
 
   programs = {
     home-manager.enable = true;
-  
+
     # modern vim
     neovim = {
       enable = true;

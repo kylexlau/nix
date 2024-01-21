@@ -1,10 +1,10 @@
 { config, pkgs, lib, ... }:
 {
-    home.file = {
-        hammerspoon = {
-            source = ./hammerspoon;
-            target = ".hammerspoon";
-            recursive = true;
-        };
+  home.file = {
+    hammerspoon = {
+      source = ./hammerspoon;
+      target = ".hammerspoon";
+      recursive = true;
     };
+  };
 }

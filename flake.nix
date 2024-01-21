@@ -13,25 +13,27 @@
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
-  {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#pro
-    darwinConfigurations."pro" = nix-darwin.lib.darwinSystem {
-      modules = [ 
-        ./modules/nix-core.nix
+    {
+      formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.nixpkgs-fmt;
+      # Build darwin flake using:
+      # $ darwin-rebuild build --flake .#pro
+      darwinConfigurations."pro" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./modules/nix-core.nix
 
-        # home manager
-        home-manager.darwinModules.home-manager {
-          users.users.kyle.home = "/Users/kyle";
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = inputs;
-          home-manager.users.kyle = import ./home;
-        }
-      ];
+          # home manager
+          home-manager.darwinModules.home-manager
+          {
+            users.users.kyle.home = "/Users/kyle";
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = inputs;
+            home-manager.users.kyle = import ./home;
+          }
+        ];
+      };
+
+      # Expose the package set, including overlays, for convenience.
+      darwinPackages = self.darwinConfigurations."pro".pkgs;
     };
-
-    # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."pro".pkgs;
-  };
 }
