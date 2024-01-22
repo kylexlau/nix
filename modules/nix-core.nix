@@ -3,10 +3,9 @@
 {
 
   imports = [
-  ./dotfiles
-  ./git.nix
-  ./fish.nix
+    ./sys.nix
   ];
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [

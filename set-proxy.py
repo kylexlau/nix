@@ -20,6 +20,10 @@ HTTP_PROXY = "http://127.0.0.1:7890"
 
 pl = plistlib.loads(NIX_DAEMON_PLIST.read_bytes())
 
+if len(sys.argv) != 2:
+    print(f'Usage: {sys.argv[0]} on/off')
+    sys.exit(1)
+
 if sys.argv[1] == "off":
   # remove http proxy
   pl["EnvironmentVariables"].pop("http_proxy", None)
