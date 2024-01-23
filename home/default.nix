@@ -37,13 +37,6 @@ in
   programs = {
     home-manager.enable = true;
 
-    # modern vim
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      vimAlias = true;
-    };
-
     eza = {
       enable = true;
       enableAliases = true;

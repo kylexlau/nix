@@ -5,21 +5,26 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    # home manager
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim }:
     {
       formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.nixpkgs-fmt;
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#pro
       darwinConfigurations."pro" = nix-darwin.lib.darwinSystem {
         modules = [
-          ./modules/nix-core.nix
+          nixvim.nixDarwinModules.nixvim
+          ./darwin
 
           # home manager
           home-manager.darwinModules.home-manager
