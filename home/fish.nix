@@ -10,6 +10,8 @@
       tailf = "tail -f";
       cat = "bat";
       findport = "sudo lsof -iTCP -sTCP:LISTEN -n -P | grep";
+      vi = "nvim";
+      vim = "nvim";
     };
 
     functions = {

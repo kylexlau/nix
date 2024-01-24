@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   system.defaults = {
     ## ref: https://daiderd.com/nix-darwin/manual/index.html
     loginwindow = {
@@ -55,9 +55,9 @@
 
     NSGlobalDomain = {
       # allow key repeat
-      ApplePressAndHoldEnabled = true;
+      ApplePressAndHoldEnabled = false;
       # delay before repeating keystrokes
-      InitialKeyRepeat = 2;
+      InitialKeyRepeat = 15;
       # delay between repeated keystrokes upon holding a key
       KeyRepeat = 1;
       AppleShowAllExtensions = true;
