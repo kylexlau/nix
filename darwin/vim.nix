@@ -22,7 +22,7 @@
       wildmode = "list:longest";
       list = true;
       number = true;
-      relativenumber = true;
+      # relativenumber = true;
       wrap = false;
       undofile = true;
       clipboard = "unnamedplus";
@@ -116,7 +116,7 @@
             # isort.enable = true;
             # taplo.enable = true;
             # jq.enable = true;
-            stylua.enable = true;
+            # stylua.enable = true;
             # markdownlint.enable = true;
             prettier.enable = true;
             # rustfmt.enable = true;

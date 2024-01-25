@@ -31,6 +31,8 @@ in
       aria2
       socat
       nmap
+
+      nginx
     ];
   };
 
