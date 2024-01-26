@@ -27,12 +27,23 @@ in
       ripgrep
       jq
       yq-go
-      fzf
       aria2
       socat
       nmap
 
       nginx
+
+      # fish
+      fish
+      oh-my-fish
+      fishPlugins.done
+      fishPlugins.fzf-fish
+      fishPlugins.forgit
+      fishPlugins.hydro
+      fzf
+      fishPlugins.grc
+      grc
+      skim
     ];
   };
 
@@ -44,11 +55,6 @@ in
       enableAliases = true;
       git = true;
       icons = true;
-    };
-
-    skim = {
-      enable = true;
-      enableBashIntegration = true;
     };
   };
 }
