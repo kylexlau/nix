@@ -37,7 +37,7 @@
         installArtifacts = true;
       };
       treesitter = {
-        enable = true;
+        enable = false;
       };
       trouble = {
         enable = true;
@@ -67,7 +67,7 @@
         enable = true;
       };
       treesitter-context = {
-        enable = true;
+        enable = false;
       };
       telescope = {
         enable = true;
