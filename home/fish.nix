@@ -5,7 +5,7 @@
 
     # fix MacOS PATH
     loginShellInit = ''
-      fish_add_path --prepend --global /etc/profiles/per-user/kyle/bin  /run/current-system/sw/bin
+      fish_add_path --prepend --global ~/.cargo/bin/ /etc/profiles/per-user/kyle/bin  /run/current-system/sw/bin
       fish_add_path --append --global ~/bin ~/go/bin ~/.juliaup/bin
     '';
 

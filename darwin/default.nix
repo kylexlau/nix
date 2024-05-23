@@ -4,7 +4,7 @@
 
   imports = [
     ./sys.nix
-    ./vim.nix
+#    ./vim.nix
   ];
 
   # List packages installed in system profile. To search by name, run:
