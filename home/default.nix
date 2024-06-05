@@ -33,6 +33,7 @@ in
       neofetch
 
       nginx
+      just
 
       # fish
       fish
