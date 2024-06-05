@@ -49,6 +49,7 @@ in
 
       # editor
       helix
+      lazygit
 
     ];
   };
