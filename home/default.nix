@@ -25,7 +25,6 @@ in
       p7zip
 
       # utils
-      ripgrep
       jq
       yq-go
       aria2
@@ -49,7 +48,6 @@ in
 
       # editor
       helix
-      lazygit
 
     ];
   };
