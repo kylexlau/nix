@@ -9,12 +9,13 @@ in
     ./dotfiles
     ./git.nix
     ./fish.nix
+    ./neovim.nix
   ];
 
   home = {
     username = username;
     homeDirectory = "/Users/${username}";
-    stateVersion = "23.05";
+    stateVersion = "24.05";
 
     packages = with pkgs; [
       # archives
@@ -30,6 +31,7 @@ in
       aria2
       socat
       nmap
+      neofetch
 
       nginx
 
@@ -44,6 +46,10 @@ in
       fishPlugins.grc
       grc
       skim
+
+      # editor
+      helix
+
     ];
   };
 
@@ -52,7 +58,6 @@ in
 
     eza = {
       enable = true;
-      enableAliases = true;
       git = true;
       icons = true;
     };
