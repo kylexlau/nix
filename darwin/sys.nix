@@ -14,21 +14,15 @@
     };
 
     trackpad = {
-      # silent clicking = 0, default = 1
       ActuationStrength = 0;
-      # enable tap to click
       Clicking = true;
-      # firmness level, 0 = lightest, 2 = heaviest
       FirstClickThreshold = 1;
-      # firmness level for force touch
       SecondClickThreshold = 1;
-      # allow positional right click
       TrackpadRightClick = true;
-      # three finger drag for space switching
-      # TrackpadThreeFingerDrag = true;
+      TrackpadThreeFingerDrag = true;
     };
 
-    # firewall settings
+    # firewall
     alf = {
       # 0 = disabled 1 = enabled 2 = blocks all connections except for essential services
       globalstate = 1;
@@ -36,7 +30,6 @@
       stealthenabled = 1;
     };
 
-    # dock settings
     dock = {
       autohide = false;
       autohide-delay = 0.0;
