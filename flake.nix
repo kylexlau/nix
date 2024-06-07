@@ -14,6 +14,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
     {
       formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.nixpkgs-fmt;
+
       darwinConfigurations."pro" = nix-darwin.lib.darwinSystem {
         modules = [
           ./darwin
