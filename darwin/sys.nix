@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   system.defaults = {
     ## ref: https://daiderd.com/nix-darwin/manual/index.html
     loginwindow = {

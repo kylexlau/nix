@@ -1,9 +1,6 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   username = "kyle";
-in
-{
+in {
   # import sub modules
   imports = [
     ./dotfiles
@@ -49,7 +46,6 @@ in
 
       # editor
       helix
-
     ];
   };
 

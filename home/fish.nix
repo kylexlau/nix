@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   programs.fish = {
     enable = true;
 
@@ -42,7 +41,7 @@
       fish_right_prompt = ''
         set -l S (math $CMD_DURATION/1000)
         set -l M (math $S/60)
-        
+
         set_color red
         echo "("
         if test $M -gt 1

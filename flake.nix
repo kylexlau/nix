@@ -11,27 +11,31 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
-    {
-      formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.nixpkgs-fmt;
+  outputs = inputs @ {
+    self,
+    nix-darwin,
+    nixpkgs,
+    home-manager,
+  }: {
+    formatter.x86_64-darwin = nixpkgs.legacyPackages.x86_64-darwin.alejandra;
 
-      darwinConfigurations."pro" = nix-darwin.lib.darwinSystem {
-        modules = [
-          ./darwin
+    darwinConfigurations."pro" = nix-darwin.lib.darwinSystem {
+      modules = [
+        ./darwin
 
-          # home manager
-          home-manager.darwinModules.home-manager
-          {
-            users.users.kyle.home = "/Users/kyle";
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = inputs;
-            home-manager.users.kyle = import ./home;
-          }
-        ];
-      };
-
-      # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."pro".pkgs;
+        # home manager
+        home-manager.darwinModules.home-manager
+        {
+          users.users.kyle.home = "/Users/kyle";
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = inputs;
+          home-manager.users.kyle = import ./home;
+        }
+      ];
     };
+
+    # Expose the package set, including overlays, for convenience.
+    darwinPackages = self.darwinConfigurations."pro".pkgs;
+  };
 }

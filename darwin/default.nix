@@ -1,7 +1,8 @@
-{ pkgs, lib, ... }:
-
 {
-
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./sys.nix
   ];
@@ -15,8 +16,8 @@
   ];
 
   # Nix settings
-  nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
