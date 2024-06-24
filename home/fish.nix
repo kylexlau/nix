@@ -33,8 +33,8 @@
           set -e https_proxy
           echo 'http[s]_proxy erased.'
         case "*"
-          set -gx http_proxy "http://127.0.0.1:7890"
-          set -gx https_proxy "http://127.0.0.1:7890"
+          set -gx http_proxy "http://127.0.0.1:3066"
+          set -gx https_proxy "http://127.0.0.1:3066"
           echo 'https[s]_proxy set.'
         end
       '';

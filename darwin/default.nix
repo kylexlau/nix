@@ -16,7 +16,10 @@
   ];
 
   # Nix settings
-  nix.settings.substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
+  nix.settings.substituters = [
+    "https://mirror.sjtu.edu.cn/nix-channels/store"
+    "https://mirrors.ustc.edu.cn/nix-channels/store"
+  ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Allow unfree packages

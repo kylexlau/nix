@@ -46,6 +46,8 @@ in {
 
       # editor
       helix
+
+      delta
     ];
   };
 
